@@ -1,9 +1,0 @@
-@function px-to-rem($size) {
-    @return $size / $base-font-size * 1rem;
-}
-@function font($lv) {
-  @return ($base-font-size + $font-space * $lv) / $base-font-size * 1rem;
-}
-@function line($fontSize) {
-  @return $fontSize * 1.5;
-}
