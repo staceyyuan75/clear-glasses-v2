@@ -16,15 +16,10 @@
     }
   }
 }
-.products {
-  h2, h3, h4 {
-    font-family: $font-family-secondary;
-  }
-}
 .mainTitle {
-  font-size: 42px;
-  line-height: 63px;
-  font-weight: 500;
+  @include font-size(42px, 63px);
+  @include font-face($font-family-secondary, 500);
+
   @include pad() {
     @include font-size(32px);
   }
@@ -75,7 +70,7 @@
   }
 }
 .productTitle {
-  @include font-size(24px);
+  @include font-face($font-family-secondary, 400);
   @include pad() {
     line-height: 30px;
   }
