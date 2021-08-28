@@ -1,0 +1,59 @@
+@mixin flexBox($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin flexAlign($alignItems, $justifyContent) {
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+@mixin pad() {
+  @media(max-width: 992px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media(max-width: 767px) {
+    @content;
+  }
+}
+// @mixin breakpoint($point) {
+// //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
+//   @if $point == pc {
+//     @media(max-width: 1024px){
+//       @content;
+//     }
+//   }
+//   @else if $point == pad {
+//     @media(max-width: 992px){
+//       @content;
+//     }
+//   }
+//   @else if $point == mobile {
+//     @media(max-width: 767px) {  
+//       @content;
+//   }
+// }
+@mixin font-size($fs, $lh: $line-height-base) {
+    font-size: $fs;
+    //font-size: $fs / $font-size-base * 1rem;
+    @if $lh { line-height: $lh; }
+}
+@mixin font-face($font-name, $weight: normal, $style: normal) {
+  font: {
+    family: $font-name;
+    weight: $weight;
+    style: $style;
+  }
+}
+@mixin border-radius($px) { 
+  -ms-border-radius: $px;
+  -moz-border-radius: $px; 
+  -webkit-border-radius: $px; 
+  -o-border-radius: $px; 
+  border-radius: $px; 
+}
+@mixin box-shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}

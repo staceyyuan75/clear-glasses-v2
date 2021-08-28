@@ -1,0 +1,75 @@
+/** 通用設定 **/
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: $font-family-primary;
+}
+
+// Background
+.bg-secondary {
+  background-color: $bg-color-secondary;
+}
+
+// Typography
+%heading {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+h1 {
+  @extend %heading;
+  @include font-size(64px);
+}
+h2 {
+  @extend %heading;
+  @include font-size(48px);
+}
+h3 {
+  @extend %heading;
+  @include font-size(24px)
+}
+
+/**** 主要容器 ****/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include pad() {
+    max-width: 720px;
+  }
+  @include mobile() {
+    max-width: 375px;
+  }
+}
+.container-py {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  @include pad() {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    //padding: 40px 0;
+  }
+  @include mobile() {
+    padding-top: 32px;
+  }
+}
+.container-sm {
+  max-width: 730px;
+  margin: 0 auto;
+  @include pad() {
+    max-width: 450px;
+  }
+  @include mobile() {
+    max-width: 345px;
+  }
+}

@@ -1,0 +1,32 @@
+/* icon 設定 */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+.material-icons-outlined {
+  &.md-18 { font-size: 18px; }
+  &.md-24 { font-size: 24px; }
+  &.md-36 { font-size: 36px; }
+  &.md-48 { font-size: 48px; }
+  @include pad() {
+    &.md-md-32 {
+      font-size: 32px;
+    }
+  }
+  @include mobile() {
+    &.md-sm-16 {
+      font-size: 16px;
+    }
+  }
+}
