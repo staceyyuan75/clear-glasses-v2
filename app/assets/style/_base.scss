@@ -26,15 +26,19 @@ body {
 
 h1 {
   @extend %heading;
-  @include font-size(64px);
+  @include font-size(72px);
 }
 h2 {
   @extend %heading;
-  @include font-size(48px);
+  @include font-size(64px);
 }
 h3 {
   @extend %heading;
-  @include font-size(24px)
+  @include font-size(48px);
+}
+h4 {
+  @extend %heading;
+  @include font-size(24px);
 }
 
 /**** 主要容器 ****/

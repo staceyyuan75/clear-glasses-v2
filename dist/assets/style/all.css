@@ -262,20 +262,10 @@ button:not(:disabled) {
 .align-content-between {
   align-content: space-between; }
 
-header, .navbar, .footer-links, .share-tools {
+header, .navbar, .footer-links {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; }
-
-.footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: start; }
 
 .footer-top {
   display: flex;
@@ -378,19 +368,23 @@ body {
 .bg-secondary {
   background-color: #FBF2F2; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700; }
 
 h1 {
-  font-size: 64px;
+  font-size: 72px;
   line-height: 1.5; }
 
 h2 {
-  font-size: 48px;
+  font-size: 64px;
   line-height: 1.5; }
 
 h3 {
+  font-size: 48px;
+  line-height: 1.5; }
+
+h4 {
   font-size: 24px;
   line-height: 1.5; }
 
@@ -440,13 +434,16 @@ header, footer {
 
 /**** header 設定 ****/
 header {
-  padding: 30px 88px; }
+  padding: 0 88px; }
   @media (max-width: 992px) {
     header {
-      padding: 30px 39px; } }
+      padding: 0 39px; } }
   @media (max-width: 767px) {
     header {
-      padding: 0; } }
+      padding: 0; }
+      header h1 {
+        font-size: 32px;
+        line-height: 1.5; } }
 
 .navbar {
   font-family: "Noto Sans TC", sans-serif;
@@ -483,10 +480,17 @@ header {
         font-size: 20px;
         line-height: 29px; } }
 
-.navbar-brand img {
-  max-width: 80px; }
+.navbar-brand a {
+  background: url("../images/logo.png") no-repeat;
+  background-size: 80px;
+  background-position: center;
+  max-width: 80px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap; }
   @media (max-width: 767px) {
-    .navbar-brand img {
+    .navbar-brand a {
+      background-size: 48px;
       max-width: 48px;
       padding-top: 10px;
       margin: 0 auto; } }

@@ -15,13 +15,17 @@ header, footer {
 /**** header 設定 ****/
 header {
   @extend %flex-ac-jsb;
-  padding: 30px 88px;
+  padding: 0 88px;
 
   @include pad() {
-    padding: 30px 39px;
+    padding: 0 39px;
   }
   @include mobile() {
     padding: 0;
+
+    h1 {
+      @include font-size(32px);
+    }
   }
 }
 .navbar {
@@ -34,8 +38,6 @@ header {
   }
 }
 .navbar-nav {
-  @extend %flex-ac-jsa;
-  
   .nav-link {
     padding: 0 2rem;
     @include pad() {
@@ -65,9 +67,16 @@ header {
   }
 }
 .navbar-brand {
-  img {
+  a {
+    background:url("../images/logo.png") no-repeat;
+    background-size: 80px;
+    background-position: center;
     max-width: 80px;
+    text-indent:101%;
+    overflow:hidden;
+    white-space:nowrap;
     @include mobile() {
+      background-size: 48px;
       max-width: 48px;
       padding-top: 10px;
       margin: 0 auto;
@@ -101,7 +110,6 @@ footer {
   padding-bottom: 36px;
 }
 .footer-nav {
-  @extend %flex-ac-js;
   @include font-face($font-family-primary);
   @include mobile() {
     display: none;
@@ -119,8 +127,6 @@ footer {
   }
 }
 .share-tools {
-  @extend %flex-ac-jsb;
-
   a {
     padding: 0 1rem;
 
