@@ -11,13 +11,12 @@
   .banner-secondary-block img {
     height: 148px; } }
 
-.products h2, .products h3, .products h4 {
-  font-family: "Roboto", sans-serif; }
-
 .mainTitle {
   font-size: 42px;
   line-height: 63px;
-  font-weight: 500; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
   @media (max-width: 992px) {
     .mainTitle {
       font-size: 32px;
@@ -70,8 +69,9 @@
      object-fit: cover; }
 
 .productTitle {
-  font-size: 24px;
-  line-height: 1.5; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
   @media (max-width: 992px) {
     .productTitle {
       line-height: 30px; } }
