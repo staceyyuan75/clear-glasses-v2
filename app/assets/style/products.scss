@@ -41,21 +41,20 @@
   }
 }
 .productList {
-  ul {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
+  margin-left: -15px;
+  margin-right: -15px;
+
   li {
-    width: 30%;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(100%/3);
+    padding-left: 15px;
+    padding-right: 15px;
     @media (min-width: 993px) {
       &:nth-child(-n+3) {
         margin-bottom: 104px;
       }
     }
     @include pad() {
-      width: 45%;
+      width: 50%;
       margin-bottom: 72px;
     }
     @include mobile {
