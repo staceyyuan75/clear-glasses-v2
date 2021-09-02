@@ -13,11 +13,6 @@ body {
   font-family: $font-family-primary;
 }
 
-// Background
-.bg-secondary {
-  background-color: $bg-color-secondary;
-}
-
 // Typography
 %heading {
   font-family: $headings-font-family;
