@@ -103,6 +103,8 @@ table {
   line-height: 1.5; }
 
 .card-title {
+  font-size: 14px;
+  line-height: 1.5;
   font-weight: 500;
   margin-bottom: 8px; }
 
